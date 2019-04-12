@@ -2,17 +2,23 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * Using Javax.swing Java.awt and Java.awt.event
  */
 
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class CartoonViewer extends JFrame{
+public class CartoonViewer extends JFrame implements ActionListener{
+    //Don't Forget to declare class Field Variable the constructor field
+    private JMenuItem profileItem,quitItem;
+    private JLabel mainlable;
     public CartoonViewer(){
         super("Image Viewer Windows");
         Container contentArea = getContentPane();
-        JLabel mainlable = new JLabel("Hello");
+        
+        mainlable = new JLabel("Hello");
         contentArea.add(mainlable);
 
         //Call Menubar
@@ -35,15 +41,29 @@ public class CartoonViewer extends JFrame{
         myMenubar.add(optionMenu);
 
         //Menu Item Inside
-        JMenuItem profileItem = new JMenuItem("View Profile");
+        profileItem = new JMenuItem("View Profile");
+        profileItem.addActionListener(this);
         optionMenu.add(profileItem);
 
         JMenuItem settingProfile = new JMenuItem("Setting Profile");
         optionMenu.add(settingProfile);
 
-        JMenuItem quitItem = new JMenuItem("Quit");
+        quitItem = new JMenuItem("Quit");
+        quitItem.addActionListener(this);
         optionMenu.add(quitItem);
     }
+    
+    //actionPerformed is a method not a constructor
+    public void actionPerformed(ActionEvent event){
+        Object source = event.getSource();
+        if(source == profileItem)
+            System.out.println("Your Profile isn't Avaliable coming soon");
+        else if(source == quitItem)
+            System.exit(0);
+        else
+            System.out.println("Cannot Working");
+    } 
+    
     public static void main(String[] aStrings) {
         new CartoonViewer();
     }
