@@ -36,3 +36,14 @@ To use the method in there using like the other class.
 			} 								        
 	}
 	```
+
+### Annonymous Class
+Don't Need to Implement the ActionListener the things that you must is
+to making the class inside the mathod call like `AddActionListener()` 
+	```
+	quitItem.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        });	
+	```
