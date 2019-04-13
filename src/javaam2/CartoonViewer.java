@@ -10,7 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class CartoonViewer extends JFrame implements ActionListener{
+public class CartoonViewer extends JFrame {
     //Don't Forget to declare class Field Variable the constructor field
     private JMenuItem profileItem,quitItem;
     private JLabel mainlable;
@@ -33,6 +33,7 @@ public class CartoonViewer extends JFrame implements ActionListener{
     }
 
     private void makeMenubar(){
+        MenuHandler myMenuHandling = new MenuHandler();
         JMenuBar myMenubar = new JMenuBar();
         setJMenuBar(myMenubar);
 
@@ -42,17 +43,19 @@ public class CartoonViewer extends JFrame implements ActionListener{
 
         //Menu Item Inside
         profileItem = new JMenuItem("View Profile");
-        profileItem.addActionListener(this);
+        profileItem.addActionListener(myMenuHandling);
         optionMenu.add(profileItem);
 
         JMenuItem settingProfile = new JMenuItem("Setting Profile");
         optionMenu.add(settingProfile);
 
         quitItem = new JMenuItem("Quit");
-        quitItem.addActionListener(this);
+        quitItem.addActionListener(myMenuHandling);
         optionMenu.add(quitItem);
     }
     
+//Using Inner Class
+    class MenuHandler implements ActionListener{
     //actionPerformed is a method not a constructor
     public void actionPerformed(ActionEvent event){
         Object source = event.getSource();
@@ -63,6 +66,9 @@ public class CartoonViewer extends JFrame implements ActionListener{
         else
             System.out.println("Cannot Working");
     } 
+    
+    }
+    
     
     public static void main(String[] aStrings) {
         new CartoonViewer();
