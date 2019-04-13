@@ -33,7 +33,7 @@ public class CartoonViewer extends JFrame {
     }
 
     private void makeMenubar(){
-        MenuHandler myMenuHandling = new MenuHandler();
+       
         JMenuBar myMenubar = new JMenuBar();
         setJMenuBar(myMenubar);
 
@@ -42,34 +42,29 @@ public class CartoonViewer extends JFrame {
         myMenubar.add(optionMenu);
 
         //Menu Item Inside
+        //Using Annonymous Class
         profileItem = new JMenuItem("View Profile");
-        profileItem.addActionListener(myMenuHandling);
+        profileItem.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                 System.out.println("Your Profile isn't Avaliable coming soon");
+            }
+        });
         optionMenu.add(profileItem);
 
         JMenuItem settingProfile = new JMenuItem("Setting Profile");
         optionMenu.add(settingProfile);
 
         quitItem = new JMenuItem("Quit");
-        quitItem.addActionListener(myMenuHandling);
+        quitItem.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        });
         optionMenu.add(quitItem);
     }
     
-//Using Inner Class
-    class MenuHandler implements ActionListener{
-    //actionPerformed is a method not a constructor
-    public void actionPerformed(ActionEvent event){
-        Object source = event.getSource();
-        if(source == profileItem)
-            System.out.println("Your Profile isn't Avaliable coming soon");
-        else if(source == quitItem)
-            System.exit(0);
-        else
-            System.out.println("Cannot Working");
-    } 
-    
-    }
-    
-    
+
+   
     public static void main(String[] aStrings) {
         new CartoonViewer();
     }
