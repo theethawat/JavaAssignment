@@ -2,6 +2,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CartoonViewer",
+            "request": "launch",
+            "mainClass": "CartoonViewer"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ImageViewer",
+            "request": "launch",
+            "mainClass": "javaam2.ImageViewer"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TextFieldTest",
             "request": "launch",
             "mainClass": "javaam2.TextFieldTest"
