@@ -47,3 +47,10 @@ to making the class inside the mathod call like `AddActionListener()`
             }
         });	
 	```
+
+## GUI Setting
+### Setting Layout
+	```
+	  Container c = getContentPane();
+        c.setLayout(new FlowLayout());
+	```
