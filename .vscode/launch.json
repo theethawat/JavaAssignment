@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TextFieldTest",
+            "request": "launch",
+            "mainClass": "javaam2.TextFieldTest"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ButtonTest",
             "request": "launch",
             "mainClass": "javaam2.ButtonTest"
