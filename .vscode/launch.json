@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - JavaAM2",
+            "request": "launch",
+            "mainClass": "javaam2.JavaAM2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CartoonViewer",
             "request": "launch",
             "mainClass": "CartoonViewer"
