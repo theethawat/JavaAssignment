@@ -12,11 +12,14 @@ import java.awt.event.*;
  * @author theet
  */
 public class MainUI extends JFrame{
-    public MainUI(){
+    private  Novice mainNovice;
+    public MainUI(Novice player){
+
         super("Ragnarok Babokotak Version 1.0.0");
+
         Container allContainer = getContentPane();
         allContainer.setLayout(new BorderLayout(10,10));
-       
+        MainPanel indexMainPanel = new MainPanel();
         
         //Inserting into right and main
         //Top
@@ -29,8 +32,8 @@ public class MainUI extends JFrame{
         
         
         //Main
-        JLabel mainLabelTest = new JLabel("Hello I'm Center");
-        allContainer.add(mainLabelTest,BorderLayout.CENTER);
+
+        allContainer.add(indexMainPanel,BorderLayout.CENTER);
         
         
         

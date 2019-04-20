@@ -1,16 +1,10 @@
 package javaam2;
 
-import java.util.*;
+import java.util.Scanner;
 
-/**
- * javaam2
- */
-public class javaam2 {
-
-    public static void main(String[] args) {
-        new MainUI();
-
-        // TODO code application logic here
+public class Ragnarok2 {
+    //Keeping Commandline Interface
+    public void commandLineInterface(){
         String nameInput, cityInput;
         Scanner scan = new Scanner(System.in);
 

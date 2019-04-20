@@ -15,5 +15,8 @@ import javax.swing.*;
 public class MainPanel extends JPanel{
     public MainPanel(){
         setBackground(Color.WHITE);
+        invalidate();
+        JLabel welcomeLabel1 = new JLabel("Hello Welcome to my Ragnarok to jail Program");
+        add(welcomeLabel1);
     }
 }
