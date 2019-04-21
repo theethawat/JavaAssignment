@@ -18,7 +18,7 @@ public class MainPanel extends JPanel{
         playerNovice = player;
         invalidate();
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
-        //Decalring
+        //Decaring
         JLabel welcomeLabel1 = new JLabel("Hello Welcome to my Ragnarok to jail Program");
         JLabel noviceName = new JLabel("Name: " + playerNovice.returnName());
         JLabel noviceImage = new JLabel(new ImageIcon(getClass().getResource("doraemon1.gif")));
