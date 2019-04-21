@@ -54,6 +54,14 @@ public class Novice {
         System.out.println("Hello  " + name + " Your status is");
         System.out.println("health: " + health + " exp:" + exp );
     }
+
+    public int returnHealth(){
+        return  health;
+    }
+
+    public int returnExp(){
+        return  exp;
+    }
    
    public String returnName(){
        return name;

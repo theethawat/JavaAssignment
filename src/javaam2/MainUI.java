@@ -12,14 +12,15 @@ import java.awt.event.*;
  * @author theet
  */
 public class MainUI extends JFrame{
-    private  Novice mainNovice;
+    private Novice playerNovice;
+
     public MainUI(Novice player){
 
         super("Ragnarok Babokotak Version 1.0.0");
-
+        playerNovice = player;
         Container allContainer = getContentPane();
         allContainer.setLayout(new BorderLayout(10,10));
-        MainPanel indexMainPanel = new MainPanel();
+        MainPanel indexMainPanel = new MainPanel(player);
         
         //Inserting into right and main
         //Top
@@ -39,8 +40,11 @@ public class MainUI extends JFrame{
         
         //Initial UI
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500,500);
+        setSize(600,600);
         setLocationRelativeTo(null);
         setVisible(true);
     }
+
+
+
 }
