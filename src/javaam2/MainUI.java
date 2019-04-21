@@ -13,14 +13,15 @@ import java.awt.event.*;
  */
 public class MainUI extends JFrame{
     private Novice playerNovice;
-
-    public MainUI(Novice player){
+    private Bag playerBag;
+    public MainUI(Novice player,Bag bag){
 
         super("Ragnarok Babokotak Version 1.0.0");
         playerNovice = player;
+        playerBag = bag;
         Container allContainer = getContentPane();
         allContainer.setLayout(new BorderLayout(10,10));
-        MainPanel indexMainPanel = new MainPanel(player);
+        MainPanel indexMainPanel = new MainPanel(player,playerBag);
         
         //Inserting into right and main
         //Top

@@ -10,7 +10,8 @@ public class javaam2 {
 
     public static void main(String[] args) {
         Novice player = new Novice("Doraemon");
-        new MainUI(player);
+        Bag playerBag = new Bag();
+        new MainUI(player,playerBag);
     }
 
 

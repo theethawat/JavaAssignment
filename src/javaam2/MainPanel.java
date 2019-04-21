@@ -14,8 +14,10 @@ import javax.swing.*;
  */
 public class MainPanel extends JPanel{
     private Novice playerNovice;
-    public MainPanel(Novice player){
+    private Bag playerBag;
+    public MainPanel(Novice player,Bag bag){
         playerNovice = player;
+        playerBag = bag;
         invalidate();
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
         //Decalring
@@ -42,19 +44,24 @@ public class MainPanel extends JPanel{
 
     private JPanel  createStatusPanel(){
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(2,2,1,1));
+        panel.setLayout(new GridLayout(3,2,1,1));
         setSize(30,30);
+
+        //Declare
         JLabel healthLabel = new JLabel("Health : ",SwingConstants.RIGHT);
         JLabel expLabel = new JLabel("Experiance : ",SwingConstants.RIGHT);
+        JLabel moneyLabel = new JLabel("Money : ",SwingConstants.RIGHT);
         JLabel healthInfo = new JLabel(String.valueOf(playerNovice.returnHealth()));
         JLabel expInfo = new JLabel(String.valueOf(playerNovice.returnExp()));
+        JLabel moneyInfo = new JLabel(String.valueOf(playerBag.showMoney()));
 
+        //Adding
         panel.add(healthLabel);
         panel.add(healthInfo);
         panel.add(expLabel);
         panel.add(expInfo);
-
-
+        panel.add(moneyLabel);
+        panel.add(moneyInfo);
 
         return  panel;
     }
