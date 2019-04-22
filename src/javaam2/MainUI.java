@@ -13,20 +13,15 @@ import java.awt.event.*;
  * @author theet
  */
 public class MainUI extends JFrame{
-    private Novice playerNovice;
-    private Bag playerBag;
-    private Monster monster[];
     public MainUI(Novice player,Bag bag,Monster monster1,Monster monster2,Monster monster3){
 
         super("Ragnarok Babokotak Version 1.0.0");
-        playerNovice = player;
-        playerBag = bag;
         Container allContainer = getContentPane();
         allContainer.setLayout(new BorderLayout(10,10));
-        MainPanel indexMainPanel = new MainPanel(player,playerBag);
+        MainPanel indexMainPanel = new MainPanel(player, bag);
 
         //Monster Creating
-        monster = new Monster[3];
+        Monster[] monster = new Monster[3];
         monster[0] = monster1;
         monster[1] = monster2;
         monster[2] = monster3;

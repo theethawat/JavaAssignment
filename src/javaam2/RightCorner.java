@@ -7,17 +7,30 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RightCorner extends JPanel {
-    private Monster monster[];
-    private Font f1 = new Font(Font.SANS_SERIF,Font.BOLD,18);
+    private Monster[] monster;
+    private int monsterKillingCount = 0;
 
-    public RightCorner(Monster monster[]){
+    public RightCorner(Monster[] monster){
+
+        //Setting
         setBorder(new EmptyBorder(0,5,15,15));
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
         setBackground(Color.WHITE);
         int i;
+        Font f1 = new Font(Font.SANS_SERIF, Font.BOLD, 18);
+        Font f2 = new Font(Font.SANS_SERIF, Font.BOLD, 16);
+
+        //Creating  Components
         JLabel head = new JLabel("Monster");
+        JLabel killingCountLabel = new JLabel("You have killed " +monsterKillingReturn()+ " monster");
+        killingCountLabel.setFont(f2);
+
         head.setFont(f1);
+        //Adding
         add(head);
+        add(killingCountLabel);
+
+        //Array Working
         int monsterAmount = monster.length;
         invalidate();
         //Display Monster
@@ -38,6 +51,9 @@ public class RightCorner extends JPanel {
                     monster[finalI].killed();
                     if(monster[finalI].checkStatus() == false){
                        monsterInfo.setText("Dead");
+                       killMonster();
+                       killingCountLabel.setText("You have killed " +monsterKillingReturn()+ " monster");
+                       kill.setVisible(false);
                     }
                     else{
                         monsterInfo.setText(("Health : " + monster[finalI].returnHealth()+
@@ -56,6 +72,14 @@ public class RightCorner extends JPanel {
             add(level);
             add(kill);
         }
+    }
+
+    public void killMonster(){
+        monsterKillingCount ++;
+    }
+
+    public int monsterKillingReturn(){
+        return monsterKillingCount;
     }
 
 }
