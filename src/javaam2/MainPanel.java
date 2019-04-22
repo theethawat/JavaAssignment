@@ -6,6 +6,8 @@
 package javaam2;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
 import javax.swing.*;
 
 /**
@@ -15,11 +17,29 @@ import javax.swing.*;
 public class MainPanel extends JPanel{
     private Novice playerNovice;
     private Bag playerBag;
+    private File font_file = new File("/Fonts/leelawad.ttf");
+    private Font f1;
+
     public MainPanel(Novice player,Bag bag){
+
+
         playerNovice = player;
         playerBag = bag;
         invalidate();
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
+        setBackground(Color.WHITE);
+
+        try{
+            f1 = Font.createFont(Font.TRUETYPE_FONT,font_file);
+        }
+        catch (IOException e){
+            System.out.println(e);
+            f1 = new Font(Font.SANS_SERIF,Font.BOLD,12);
+        }
+        catch (FontFormatException fm){
+            System.out.println(fm);
+            f1 = new Font(Font.SANS_SERIF,Font.BOLD,12);
+        }
         //Decaring
         JLabel welcomeLabel1 = new JLabel("Hello Welcome to my Ragnarok to jail Program");
         JLabel noviceName = new JLabel("Name: " + playerNovice.returnName());
@@ -28,9 +48,12 @@ public class MainPanel extends JPanel{
 
         JLabel describe = new JLabel("<html> โดเรม่อนงุ่นงิ่น เป็น โดเรม่อนโนวิก ชนิดหนึ่งที่" +
                 "<br>สามารถเอาของวิเศษออกมาได้ โดยไม่ต้องยืมเพื่อน <br> เป็นโนวิก เริ่มต้นของคุณ</html>");
+       describe.setFont(f1);
+
        describe.setSize(30,40);
         describe.setBounds(10,10,200,200);
         JPanel statuspanel = createStatusPanel();
+        JLabel copyrightPanel = new JLabel("Copyright 2019 Theethawat Savastham, For Education");
         //Adding
         add(welcomeLabel1);
         add(noviceName);
@@ -38,15 +61,15 @@ public class MainPanel extends JPanel{
 
         add(describe);
         add(statuspanel);
-
+        add(copyrightPanel);
         playerNovice.printStatus();
     }
 
     private JPanel  createStatusPanel(){
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(3,2,1,1));
-        setSize(30,30);
-
+        panel.setSize(30,30);
+        panel.setBackground(Color.WHITE);
         //Declare
         JLabel healthLabel = new JLabel("Health : ",SwingConstants.RIGHT);
         JLabel expLabel = new JLabel("Experiance : ",SwingConstants.RIGHT);
