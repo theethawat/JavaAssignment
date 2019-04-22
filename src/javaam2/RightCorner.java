@@ -23,8 +23,6 @@ public class RightCorner extends JPanel {
         //Display Monster
         for (i = 0; i<monsterAmount ; i++){
 
-            if(monster[i].checkStatus() == false)
-                break;
 
             JLabel monsterLabel = new JLabel(new ImageIcon(getClass().getResource(monster[i].returnImage())));
             monsterLabel.setSize(2,2);
@@ -32,15 +30,26 @@ public class RightCorner extends JPanel {
             JLabel monsterInfo = new JLabel("Health : " + monster[i].returnHealth()+
                     " Damage:"+ monster[i].killDamage());
             JButton kill = new JButton("Kill");
+            JLabel level = new JLabel("Level: "+monster[i].returnLevel());
             int finalI = i;
             kill.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     monster[finalI].killed();
+                    if(monster[finalI].checkStatus() == false){
+                       monsterInfo.setText("Dead");
+                    }
+                    else{
+                        monsterInfo.setText(("Health : " + monster[finalI].returnHealth()+
+                                " Damage:"+ monster[finalI].killDamage()));
+                        monster[finalI].levelDown();
+                        level.setText("Level: "+monster[finalI].returnLevel());
+                    }
+
                     invalidate();
                 }
             });
-            JLabel level = new JLabel("Level: "+monster[i].returnLevel());
+
             add(monsterLabel);
             add(monsterName);
             add(monsterInfo);

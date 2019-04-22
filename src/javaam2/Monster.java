@@ -13,7 +13,7 @@ public class Monster {
     //Constructor
     public Monster(String name,String image){
             monsterName = name;
-            level = 1;
+            level = 4;
             health  = rand.nextInt(300);
             monsterImage = image;
     }
@@ -27,7 +27,7 @@ public class Monster {
     }
 
     public void killed(){
-        health = health - 75;
+        health = health - 100;
     }
 
     public boolean checkStatus(){
@@ -53,8 +53,8 @@ public class Monster {
         return level;
     }
 
-    public void levelUp(){
-        level = level +1 ;
+    public void levelDown(){
+        level = level -1 ;
     }
 }
 
