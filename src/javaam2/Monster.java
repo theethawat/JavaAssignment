@@ -26,6 +26,10 @@ public class Monster {
         return  killingDam;
     }
 
+    public void killed(){
+        health = health - 75;
+    }
+
     public boolean checkStatus(){
         if(health <= 0)
             return false;
@@ -43,6 +47,10 @@ public class Monster {
 
     public String returnImage(){
         return  monsterImage;
+    }
+
+    public int returnLevel(){
+        return level;
     }
 
     public void levelUp(){

@@ -9,6 +9,7 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 /**
  *
@@ -18,6 +19,7 @@ public class MainPanel extends JPanel{
     private Novice playerNovice;
     private Bag playerBag;
     private File font_file = new File("/Fonts/leelawad.ttf");
+    private Font f2 = new Font(Font.SANS_SERIF,Font.BOLD,18);
     private Font f1;
 
     public MainPanel(Novice player,Bag bag){
@@ -41,13 +43,15 @@ public class MainPanel extends JPanel{
             f1 = new Font(Font.SANS_SERIF,Font.BOLD,12);
         }
         //Decaring
+        JLabel header = new JLabel("Player Area");
+        header.setFont(f2);
         JLabel welcomeLabel1 = new JLabel("Hello Welcome to my Ragnarok to jail Program");
         JLabel noviceName = new JLabel("Name: " + playerNovice.returnName());
         JLabel noviceImage = new JLabel(new ImageIcon(getClass().getResource("doraemon1.gif")));
 
 
-        JLabel describe = new JLabel("<html> โดเรม่อนงุ่นงิ่น เป็น โดเรม่อนโนวิก ชนิดหนึ่งที่" +
-                "<br>สามารถเอาของวิเศษออกมาได้ โดยไม่ต้องยืมเพื่อน <br> เป็นโนวิก เริ่มต้นของคุณ</html>");
+        JLabel describe = new JLabel("<html> Nguen Ngin Doraemon one of the Doraemon Novice" +
+                "<br>Can bring a magic thing from it bag with out borrow Doraemy Bag. <br> This is your Innitial Novice</html>");
        describe.setFont(f1);
 
        describe.setSize(30,40);
@@ -55,6 +59,7 @@ public class MainPanel extends JPanel{
         JPanel statuspanel = createStatusPanel();
         JLabel copyrightPanel = new JLabel("Copyright 2019 Theethawat Savastham, For Education");
         //Adding
+        add(header);
         add(welcomeLabel1);
         add(noviceName);
         add(noviceImage);
@@ -63,6 +68,7 @@ public class MainPanel extends JPanel{
         add(statuspanel);
         add(copyrightPanel);
         playerNovice.printStatus();
+        setBorder(new EmptyBorder(0,5,10,0));
     }
 
     private JPanel  createStatusPanel(){
@@ -85,6 +91,8 @@ public class MainPanel extends JPanel{
         panel.add(expInfo);
         panel.add(moneyLabel);
         panel.add(moneyInfo);
+
+        panel.setMaximumSize(new Dimension(700,70));
 
         return  panel;
     }
