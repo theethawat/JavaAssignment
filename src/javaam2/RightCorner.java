@@ -54,12 +54,14 @@ public class RightCorner extends JPanel {
                        killMonster();
                        killingCountLabel.setText("You have killed " +monsterKillingReturn()+ " monster");
                        kill.setVisible(false);
+                        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(),"Kill " + monster[finalI].returnName() +" Success");
                     }
                     else{
                         monsterInfo.setText(("Health : " + monster[finalI].returnHealth()+
                                 " Damage:"+ monster[finalI].killDamage()));
                         monster[finalI].levelDown();
                         level.setText("Level: "+monster[finalI].returnLevel());
+                        JOptionPane.showMessageDialog(JOptionPane.getRootFrame(),"you want to kill " + monster[finalI].returnName() +" But it has not dead yet.");
                     }
 
                     invalidate();

@@ -59,7 +59,7 @@ public class MainPanel extends JPanel{
         JPanel statuspanel = createStatusPanel();
 
         JButton randomMoney = new JButton("Get More Money");
-        
+
         randomMoney.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
