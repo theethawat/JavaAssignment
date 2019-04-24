@@ -34,7 +34,9 @@ public class MainUI extends JFrame{
         
         //Right
         allContainer.add(new RightCorner(monster),BorderLayout.EAST);
-        
+
+        //Left
+        allContainer.add(new LeftCorner(bag),BorderLayout.WEST);
         
         //Main
 
@@ -44,7 +46,7 @@ public class MainUI extends JFrame{
         allContainer.setBackground(Color.WHITE);
         //Initial UI
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(650,700);
+        setSize(800,700);
         setLocationRelativeTo(null);
         setVisible(true);
     }

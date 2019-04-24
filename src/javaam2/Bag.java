@@ -5,6 +5,8 @@
  */
 package javaam2;
 
+import java.util.Random;
+
 /**
  * From Item
  * private int price;
@@ -17,6 +19,8 @@ public class Bag {
     private Podium podium;
     private Standy standy;
     private int money;
+    private Random random = new Random();
+
     public Bag(){
         //Prototype public Item(int itemPrice,int itemAmount,int itemDamage)
         money = 1000;
@@ -87,4 +91,15 @@ public class Bag {
           System.out.println("Tank #Coming Soon # -  Price" + tank.getPrice() + "Damage" + tank.getDamage() );
           System.out.println("Submarine #Coming Sonn# -  Price" + submarine.getPrice() + "Damage" + submarine.getDamage() );
      }
+
+     public void letMoneyDown(){
+        money = money -100;
+     }
+
+     public int addingRandomMoney(){
+        int inMoney=random.nextInt(100);
+        money = money + inMoney;
+        return inMoney;
+     }
+
 }

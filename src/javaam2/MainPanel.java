@@ -21,7 +21,7 @@ public class MainPanel extends JPanel{
     private File font_file = new File("/Fonts/leelawad.ttf");
     private Font f2 = new Font(Font.SANS_SERIF,Font.BOLD,18);
     private Font f1;
-
+    private JLabel moneyInfo = new JLabel();
     public MainPanel(Novice player,Bag bag){
 
 
@@ -57,6 +57,18 @@ public class MainPanel extends JPanel{
        describe.setSize(30,40);
         describe.setBounds(10,10,200,200);
         JPanel statuspanel = createStatusPanel();
+
+        JButton randomMoney = new JButton("Get More Money");
+        
+        randomMoney.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int recieveMoney = bag.addingRandomMoney();
+                JOptionPane.showMessageDialog(JOptionPane.getRootFrame(),"You got " + recieveMoney + " From Gachapon Random Congrat!");
+                moneyInfo.setText(String.valueOf(playerBag.showMoney()));
+            }
+        });
+
         JLabel copyrightPanel = new JLabel("Copyright 2019 Theethawat Savastham, For Education");
         //Adding
         add(header);
@@ -66,8 +78,12 @@ public class MainPanel extends JPanel{
 
         add(describe);
         add(statuspanel);
+        add(randomMoney);
         add(copyrightPanel);
+
         playerNovice.printStatus();
+
+
         setBorder(new EmptyBorder(0,5,10,0));
     }
 
@@ -82,7 +98,7 @@ public class MainPanel extends JPanel{
         JLabel moneyLabel = new JLabel("Money : ",SwingConstants.RIGHT);
         JLabel healthInfo = new JLabel(String.valueOf(playerNovice.returnHealth()));
         JLabel expInfo = new JLabel(String.valueOf(playerNovice.returnExp()));
-        JLabel moneyInfo = new JLabel(String.valueOf(playerBag.showMoney()));
+        moneyInfo.setText(String.valueOf(playerBag.showMoney()));
 
         //Adding
         panel.add(healthLabel);
@@ -93,7 +109,7 @@ public class MainPanel extends JPanel{
         panel.add(moneyInfo);
 
         panel.setMaximumSize(new Dimension(700,70));
-
+        invalidate();
         return  panel;
     }
 
