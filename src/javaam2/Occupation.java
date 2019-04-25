@@ -39,4 +39,9 @@ public class Occupation {
     public String returnPrefix(){
         return prefix;
     }
+
+    public int returnLevel(){
+        return level;
+    }
+
 }
