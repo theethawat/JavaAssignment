@@ -1,6 +1,7 @@
 # Swing GUI Java Assignment - Ragnarok
-![program screenshot](screenshot.jpeg)
+![program screenshot](https://raw.githubusercontent.com/theethawat/JavaAssignment/master/Screenshot.jpg)
 
+https://vsrm.dev.azure.com/theethawats/_apis/public/Release/badge/14d899b7-8338-430d-b6b4-8ba2004d2d9d/1/1
 ## Environment
 * IDE: IntelliJ IDEA 19.1 Community (Move From NetBeansIDE10)
 * OS : Windows 10 Education
@@ -30,11 +31,11 @@ make sure you have Java Runtime Environment in Your Computer
 ### กามพยายามทำให้คอยเซปต์ Object Oriented Programing
 พยายาม Private to class มากขึ้น ถึงแม้ว่าอาจจะไม่ได้ทำฟังก์ชันอะไรมากมาย เนื่องจากผู้ทำเองก็ยังสงสัย การเรียก Method ข้าม Panel ข้าม Class ไม่ทราบว่าต้อง new Object หรือไม่ แต่ก็มีบางอย่างที่รู้เข้าใจว่าน่าจะเป็นการเขียนแบบ C-Style Java อยู่บ้าง
 
-## Methodology that programe working 
-![Program Working Model](screenshot2.jpg)
+### การทำงานของโปรแกรม
+![Program Working Model](https://raw.githubusercontent.com/theethawat/JavaAssignment/master/Screenshot2.jpg)
 
 ## Credit
-ธีร์ธวัช สวาสดิ์ธรรม Theethawat Savasham
+ธีร์ธวัช สวาสดิ์ธรรม - Theethawat Savasham
 
 CoEPSU - theethawat.s@outlook.co.th
 
