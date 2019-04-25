@@ -1,4 +1,43 @@
-# JavaAssignment
+# Swing GUI Java Assignment - Ragnarok
+![screenshot.jpeg]
+
+## Environment
+* IDE: IntelliJ IDEA 19.1 Community (Move From NetBeansIDE10)
+* OS : Windows 10 Education
+* JavaRuntimeEnviroment (JRE) 1.8.0
+* JavaSoftwareDevelopmentKit (JDK) 1.8.0
+
+## Download Game
+In Release Page [https://github.com/theethawat/JavaAssignment/releases](Download) Should Download .jar version 
+make sure you have Java Runtime Environment in Your Computer
+
+## Knowledge Issue
+### การ Handle Event GUI
+โดยส่วนหลัก จะใช้ GUI การสร้าง GUI ต่าง ๆ โดยการทำ Listener ต่างๆ มักจะเขียนด้วย
+ Annonymous Class มากกว่า Inner Class หรือ การ Overide Method
+### การวาง Layout
+ มีการวาง Layout ทั้งแบบ Box Layout จากที่เห็นได้ในด้านข้างทั้งสอง Grid Layout บนตารางแสดงค่า Health , 
+ Experience ต่างๆ และมีการใช้ Border Layout ในการจัดหน้า MainUI จะเห็นได้ว่ามีการวางหน้าหลักเป็นส่วน ๆ 
+### การสร้าง Label Box 
+การสร้างข้อความต่าง ๆ พวก JLabel ในตอนแรกต้องการให้ข้อความมีการ Wrap แต่ไม่ทราบว่าทำเช่นไร จึงเปิดหา และ พบบทความใน
+ Stack Overflow ให้ใช้ในรูปของ HTML Inside Java Code เป็น html ง่ายๆ มีแค่การเว้นบรรทัด หรือคำสั่งพื้นฐานอื่น ๆ 
+ แต่ต่อมาได้พบว่าการใช้ '\n' ก็สามารถใช้ได่
+ ### การใช้ไฟล์
+ ในเวอร์ชั่นเก่าของ Source Code มีการใช้ไฟล์ เพื่อนำมาใช้เป็นไฟล์ฟอนต์ ทำให้ทราบว่า เราต้องลิงค์ไปยัง Path จริง ๆ ของไฟล์ ทำให้ได้เรียนรู้การทำ Exception แต่เนื่องจากเมื่อฟอนต์สามารถทำงานได้แล้ว กลับไม่ได้เพิ่มขนาดฟอนต์ จึงทำการใช้ฟอนต์พื้นฐานเช่นเดิม 
+### การใช้ Extends
+ นอกจาก Extends JPanel , JFrame, … แล้ว มีการสร้าง Class Primin แลพ  Oldprime ที่สืบทอดจาก Occupation 
+ เราไม่จำเป็นต้อง Overide Method ที่มีใน Occupation ไปยัง Primin แต่เมื่อเราเรียก เราสามารถเรียกใช้ได้ทันที 
+### กามพยายามทำให้คอยเซปต์ Object Oriented Programing
+พยายาม Private to class มากขึ้น ถึงแม้ว่าอาจจะไม่ได้ทำฟังก์ชันอะไรมากมาย เนื่องจากผู้ทำเองก็ยังสงสัย การเรียก Method ข้าม Panel ข้าม Class ไม่ทราบว่าต้อง new Object หรือไม่ แต่ก็มีบางอย่างที่รู้เข้าใจว่าน่าจะเป็นการเขียนแบบ C-Style Java อยู่บ้าง
+
+## Methodology that programe working 
+![screenshot2.jpg]
+
+## Credit
+ธีร์ธวัช สวาสดิ์ธรรม 
+
+
+## Swing Function Working
 
 ## Handling
 ### Basic Handling 
