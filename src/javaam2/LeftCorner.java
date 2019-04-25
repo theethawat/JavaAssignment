@@ -17,13 +17,23 @@ public class LeftCorner extends JPanel {
         JLabel head = new JLabel("Your Item");
         head.setFont(f1);
         add(head);
-        Primemin minnion = new Primemin("General Badge", 500, 40);
-        JLabel minnionName = new JLabel("Minnion General");
-        JLabel minnionLevel = new JLabel("Level "+ minnion.returnLevel());
-        JLabel minnnionGif = new JLabel(new ImageIcon(getClass().getResource("minnion.gif")));
-//        minnnionGif.setMaximumSize(new Dimension(100,200));
-        add(minnionName);
-        add(minnionLevel);
-        add(minnnionGif);
+        //Priminister
+        Primemin priMinnion = new Primemin("General Badge", 500, 40);
+        JLabel priMinnionName = new JLabel("Prime Minister Minnion");
+        JLabel priMinnionLevel = new JLabel("Level "+ priMinnion.returnPrefix()+"  "+priMinnion.returnLevel());
+        JLabel priMinnnionGif = new JLabel(new ImageIcon(getClass().getResource("minnion.gif")));
+
+        add(priMinnionName);
+        add(priMinnionLevel);
+        add(priMinnnionGif);
+
+        //OldPrime
+        OldPrime ultraman = new OldPrime("Old Gardian",1000,500,"Singapore");
+        JLabel ultramanName = new JLabel("Ultraman 80");
+        JLabel ultramanLevel = new JLabel("Level "+ ultraman.returnPrefix()+" " + ultraman.returnLevel());
+        JLabel ultramanImg = new JLabel(new ImageIcon(getClass().getResource("ultraman.jpg")));
+        add(ultramanName);
+        add(ultramanLevel);
+        add(ultramanImg);
     }
 }
