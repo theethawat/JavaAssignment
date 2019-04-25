@@ -1,5 +1,4 @@
 # Swing GUI Java Assignment - Ragnarok
-![program screenshot](https://raw.githubusercontent.com/theethawat/JavaAssignment/master/Screenshot.jpg)
 
 ![](https://vsrm.dev.azure.com/theethawats/_apis/public/Release/badge/14d899b7-8338-430d-b6b4-8ba2004d2d9d/1/1)
 ## Environment
@@ -12,6 +11,7 @@
 In Release Page [Download](https://github.com/theethawat/JavaAssignment/releases) Should Download .jar version 
 make sure you have Java Runtime Environment in Your Computer
 
+![program screenshot](https://raw.githubusercontent.com/theethawat/JavaAssignment/master/Screenshot.jpg)
 ## Knowledge Issue
 ### การ Handle Event GUI
 โดยส่วนหลัก จะใช้ GUI การสร้าง GUI ต่าง ๆ โดยการทำ Listener ต่างๆ มักจะเขียนด้วย
