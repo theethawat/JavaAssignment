@@ -36,4 +36,8 @@ public class Primemin extends Occupation {
     public int returnPremierNo(){
         return premierCouncil;
     }
+
+    public int returnReporterAmount(){
+        return  reporter;
+    }
 }

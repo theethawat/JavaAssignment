@@ -18,9 +18,9 @@ import javax.swing.border.EmptyBorder;
 public class MainPanel extends JPanel{
     private Novice playerNovice;
     private Bag playerBag;
-    private File font_file = new File("/Fonts/leelawad.ttf");
+    private File font_file = new File("D:\\A Tin 2019\\JavaAM2\\src\\javaam2\\Fonts\\leelawad.ttf");
     private Font f2 = new Font(Font.SANS_SERIF,Font.BOLD,18);
-    private Font f1;
+    private Font f1 = new Font(Font.SANS_SERIF,Font.BOLD,12); ;
     private JLabel moneyInfo = new JLabel();
     public MainPanel(Novice player,Bag bag){
 
@@ -31,17 +31,6 @@ public class MainPanel extends JPanel{
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
         setBackground(Color.WHITE);
 
-        try{
-            f1 = Font.createFont(Font.TRUETYPE_FONT,font_file);
-        }
-        catch (IOException e){
-            System.out.println(e);
-            f1 = new Font(Font.SANS_SERIF,Font.BOLD,12);
-        }
-        catch (FontFormatException fm){
-            System.out.println(fm);
-            f1 = new Font(Font.SANS_SERIF,Font.BOLD,12);
-        }
         //Decaring
         JLabel header = new JLabel("Player Area");
         header.setFont(f2);
@@ -69,7 +58,7 @@ public class MainPanel extends JPanel{
             }
         });
 
-        JLabel copyrightPanel = new JLabel("Copyright 2019 Theethawat Savastham, For Education");
+
         //Adding
         add(header);
         add(welcomeLabel1);
@@ -79,7 +68,7 @@ public class MainPanel extends JPanel{
         add(describe);
         add(statuspanel);
         add(randomMoney);
-        add(copyrightPanel);
+
 
         playerNovice.printStatus();
 
