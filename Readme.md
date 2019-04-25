@@ -1,5 +1,5 @@
 # Swing GUI Java Assignment - Ragnarok
-![screenshot.jpeg]
+![program screenshot](screenshot.jpeg)
 
 ## Environment
 * IDE: IntelliJ IDEA 19.1 Community (Move From NetBeansIDE10)
@@ -8,7 +8,7 @@
 * JavaSoftwareDevelopmentKit (JDK) 1.8.0
 
 ## Download Game
-In Release Page [https://github.com/theethawat/JavaAssignment/releases](Download) Should Download .jar version 
+In Release Page [Download](https://github.com/theethawat/JavaAssignment/releases) Should Download .jar version 
 make sure you have Java Runtime Environment in Your Computer
 
 ## Knowledge Issue
@@ -31,10 +31,12 @@ make sure you have Java Runtime Environment in Your Computer
 พยายาม Private to class มากขึ้น ถึงแม้ว่าอาจจะไม่ได้ทำฟังก์ชันอะไรมากมาย เนื่องจากผู้ทำเองก็ยังสงสัย การเรียก Method ข้าม Panel ข้าม Class ไม่ทราบว่าต้อง new Object หรือไม่ แต่ก็มีบางอย่างที่รู้เข้าใจว่าน่าจะเป็นการเขียนแบบ C-Style Java อยู่บ้าง
 
 ## Methodology that programe working 
-![screenshot2.jpg]
+![Program Working Model](screenshot2.jpg)
 
 ## Credit
-ธีร์ธวัช สวาสดิ์ธรรม 
+ธีร์ธวัช สวาสดิ์ธรรม Theethawat Savasham
+
+CoEPSU - theethawat.s@outlook.co.th
 
 
 ## Swing Function Working
