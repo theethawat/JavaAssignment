@@ -66,4 +66,8 @@ public class Novice {
    public String returnName(){
        return name;
    }
+   public void increaseExp(){
+        int inExp = rand.nextInt(300);
+        exp = exp + inExp;
+   }
 }

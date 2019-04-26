@@ -10,8 +10,12 @@ public class RightCorner extends JPanel {
     private Monster[] monster;
     private int monsterKillingCount = 0;
 
-    public RightCorner(Monster[] monster){
-
+    //For Reference
+    private Novice player;
+    private  MainPanel panelMain;
+    public RightCorner(Monster[] monster,Novice player,MainPanel panelMain){
+        this.player = player;
+        this.panelMain = panelMain;
         //Setting
         setBorder(new EmptyBorder(0,5,15,15));
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
@@ -62,9 +66,10 @@ public class RightCorner extends JPanel {
                         monster[finalI].levelDown();
                         level.setText("Level: "+monster[finalI].returnLevel());
                         JOptionPane.showMessageDialog(JOptionPane.getRootFrame(),"you want to kill " + monster[finalI].returnName() +" But it has not dead yet.");
-                    }
 
-                    invalidate();
+                    }
+                    player.increaseExp();
+                    panelMain.updateEXP();
                 }
             });
 

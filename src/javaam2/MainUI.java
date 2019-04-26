@@ -74,10 +74,10 @@ public class MainUI extends JFrame{
         allContainer.add(topLabelTest,BorderLayout.NORTH);
         
         //Right
-        allContainer.add(new RightCorner(monster),BorderLayout.EAST);
+        allContainer.add(new RightCorner(monster,player,indexMainPanel),BorderLayout.EAST);
 
         //Left
-        allContainer.add(new LeftCorner(bag),BorderLayout.WEST);
+        allContainer.add(new LeftCorner(bag,indexMainPanel),BorderLayout.WEST);
         
         //Main
 
@@ -92,6 +92,7 @@ public class MainUI extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(850,700);
         setLocationRelativeTo(null);
+        invalidate();
         setVisible(true);
     }
 

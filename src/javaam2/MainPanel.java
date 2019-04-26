@@ -22,6 +22,7 @@ public class MainPanel extends JPanel{
     private Font f2 = new Font(Font.SANS_SERIF,Font.BOLD,18);
     private Font f1 = new Font(Font.SANS_SERIF,Font.BOLD,12); ;
     private JLabel moneyInfo = new JLabel();
+    private  JLabel expInfo;
     public MainPanel(Novice player,Bag bag){
 
 
@@ -86,7 +87,7 @@ public class MainPanel extends JPanel{
         JLabel expLabel = new JLabel("Experiance : ",SwingConstants.RIGHT);
         JLabel moneyLabel = new JLabel("Money : ",SwingConstants.RIGHT);
         JLabel healthInfo = new JLabel(String.valueOf(playerNovice.returnHealth()));
-        JLabel expInfo = new JLabel(String.valueOf(playerNovice.returnExp()));
+        expInfo = new JLabel(String.valueOf(playerNovice.returnExp()));
         moneyInfo.setText(String.valueOf(playerBag.showMoney()));
 
         //Adding
@@ -100,6 +101,14 @@ public class MainPanel extends JPanel{
         panel.setMaximumSize(new Dimension(700,70));
         invalidate();
         return  panel;
+    }
+
+    public void updateEXP(){
+        expInfo.setText(String.valueOf(playerNovice.returnExp()));
+    }
+
+    public void updateMoney(){
+        moneyInfo.setText(String.valueOf(playerBag.showMoney()));
     }
 
 }

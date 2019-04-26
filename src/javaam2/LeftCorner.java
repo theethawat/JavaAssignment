@@ -6,9 +6,10 @@ import  java.awt.*;
 import java.awt.event.*;
 
 public class LeftCorner extends JPanel {
-
-    public LeftCorner(Bag playerBag) {
+    private  MainPanel mainPanel;
+    public LeftCorner(Bag playerBag,MainPanel mainPanel) {
         //Initial
+        this.mainPanel = mainPanel;
         setBorder(new EmptyBorder(0, 5, 15, 15));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBackground(Color.WHITE);
@@ -31,8 +32,10 @@ public class LeftCorner extends JPanel {
         increaseReporter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                playerBag.letMoneyDown();
                 priMinnion.increaseReporter();
                 reporterLabel.setText("Reporter Amount : " + priMinnion.returnReporterAmount());
+                mainPanel.updateMoney();
             }
         });
         add(priMinnionName);
