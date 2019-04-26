@@ -1,6 +1,8 @@
 # Swing GUI Java Assignment - Ragnarok
 
 ![](https://vsrm.dev.azure.com/theethawats/_apis/public/Release/badge/14d899b7-8338-430d-b6b4-8ba2004d2d9d/1/1)
+[![Build Status](https://dev.azure.com/theethawats/theethawatpredev/_apis/build/status/theethawat.JavaAssignment?branchName=master)](https://dev.azure.com/theethawats/theethawatpredev/_build/latest?definitionId=2&branchName=master)
+
 ## Environment
 * IDE: IntelliJ IDEA 19.1 Community (Move From NetBeansIDE10)
 * OS : Windows 10 Education
